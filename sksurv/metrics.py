@@ -184,6 +184,11 @@ def concordance_index_censored(event_indicator, event_time, estimate, tied_tol=1
     tied_time : int
         Number of comparable pairs sharing the same time
 
+    See also
+    --------
+    concordance_index_ipcw
+        Alternative estimator of the concordance index with less bias.
+
     References
     ----------
     .. [1] Harrell, F.E., Califf, R.M., Pryor, D.B., Lee, K.L., Rosati, R.A,
@@ -268,6 +273,11 @@ def concordance_index_ipcw(survival_train, survival_test, estimate, tau=None, ti
 
     tied_time : int
         Number of comparable pairs sharing the same time
+
+    See also
+    --------
+    concordance_index_censored
+        Simpler estimator of the concordance index.
 
     References
     ----------

@@ -751,9 +751,6 @@ class FastSurvivalSVM(BaseSurvivalSVM, SurvivalAnalysisMixin):
     objective is used, survival/censoring times are log-transform and thus cannot be
     zero or negative.
 
-    See :class:`sksurv.svm.FastKernelSurvivalSVM` for an efficient implementation
-    of kernel Survival Support Vector Machine.
-
     See [1]_ for further description.
 
     Parameters
@@ -799,6 +796,11 @@ class FastSurvivalSVM(BaseSurvivalSVM, SurvivalAnalysisMixin):
 
     optimizer_result_ : :class:`scipy.optimize.optimize.OptimizeResult`
         Stats returned by the optimizer. See :class:`scipy.optimize.optimize.OptimizeResult`.
+
+    See also
+    --------
+    FastKernelSurvivalSVM
+        Fast implementation for arbitrary kernel functions.
 
     References
     ----------
@@ -922,6 +924,11 @@ class FastKernelSurvivalSVM(BaseSurvivalSVM, SurvivalAnalysisMixin):
 
     optimizer_result_ : :class:`scipy.optimize.optimize.OptimizeResult`
         Stats returned by the optimizer. See :class:`scipy.optimize.optimize.OptimizeResult`.
+
+    See also
+    --------
+    FastSurvivalSVM
+        Fast implementation for linear kernel.
 
     References
     ----------
